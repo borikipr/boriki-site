@@ -6,7 +6,7 @@ import { Header } from "@/components/header";
 export const metadata: Metadata = {
   metadataBase: new URL("https://apps.borikipr.com"),
   title: {
-    default: "Borikí Apps | Software Portal",
+    default: "Borikí Apps | Portal de Software",
     template: "%s | Borikí Apps",
   },
   description:
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: "/assets/logo-boriki.png",
         width: 1200,
         height: 1200,
-        alt: "Borikí logo",
+        alt: "Logo Borikí",
       },
     ],
     locale: "es_PR",

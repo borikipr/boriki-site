@@ -7,15 +7,15 @@ export function Footer() {
       <div className="shell footer-inner">
         <div>
           <strong>Borikí Apps</strong>
-          <p className="small">CRM Powered by Borikí • v{crm.version}</p>
+          <p className="small">CRM impulsado por Borikí • v{crm.version}</p>
           <p className="small">© {new Date().getFullYear()} {site.company}</p>
         </div>
         <nav className="footer-links" aria-label="Footer">
-          <Link href="/">Home</Link>
+          <Link href="/">Inicio</Link>
           <Link href="/crm">CRM</Link>
           <Link href="/crm#changelog">Changelog</Link>
           <Link href="/crm#faq">Preguntas</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">Contacto</Link>
         </nav>
       </div>
     </footer>

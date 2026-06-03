@@ -40,7 +40,7 @@ export function DownloadCard({
           Descargar v{version}
         </a>
         <a className="button" href="#release-notes">
-          Ver release notes
+          Ver notas de versión
         </a>
       </div>
     </article>

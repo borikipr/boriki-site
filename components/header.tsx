@@ -8,16 +8,16 @@ export function Header() {
     <header className="site-header">
       <div className="top-strip">
         <div className="shell top-strip-inner">
-          <span>Borikí Apps · Software Portal</span>
-          <span>CRM Powered by Borikí</span>
+          <span>Borikí Apps · Portal de software</span>
+          <span>CRM impulsado por Borikí</span>
         </div>
       </div>
       <div className="shell nav">
-        <Link className="brand" href="/" aria-label="Borikí Apps Home">
+        <Link className="brand" href="/" aria-label="Inicio de Borikí Apps">
           <Image
             className="brand-mark"
             src={site.logo}
-            alt="Borikí logo"
+            alt="Logo Borikí"
             width={108}
             height={108}
             priority

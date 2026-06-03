@@ -49,11 +49,11 @@ export default function CrmPage() {
           <div>
             <span className="kicker">Borikí Apps • Producto CRM</span>
             <h1 className="page-title">
-              CRM para seguimiento con orden y presencia.
+              CRM para seguimiento con orden, claridad y presencia.
             </h1>
             <p className="subtitle">
               Borikí CRM es una aplicación local para Windows creada para
-              organizar clientes, contactos, seguimiento, actividades y etapas
+              organizar clientes, contactos, actividades, etapas y seguimiento
               sin complicar la operación diaria. Incluye prueba completa de{" "}
               <strong>30 días</strong> y activación mediante{" "}
               <strong>Product Key</strong>.
@@ -164,7 +164,7 @@ export default function CrmPage() {
                 cualquier requisito adicional si aplica.
               </p>
             </FeatureCard>
-            <FeatureCard title="Soporte y contacto" badge={site.email}>
+            <FeatureCard title="Soporte" badge={site.email}>
               <p>
                 El soporte, compras de licencia y preguntas comerciales se
                 manejan por el email oficial.
