@@ -3,11 +3,11 @@ import Link from "next/link";
 import { FeatureCard } from "@/components/feature-card";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Sobre BorikíPR: origen, propósito y visión.",
+  title: "Sobre Borikí",
+  description: "Sobre BorikíPR: origen, propósito y visión de productos.",
   openGraph: {
-    title: "About | Borikí Apps",
-    description: "Origen, propósito y visión de BorikíPR.",
+    title: "Sobre Borikí | Borikí Apps",
+    description: "Origen, propósito y visión de BorikíPR como marca de software.",
     url: "/about",
   },
 };
@@ -18,11 +18,11 @@ export default function AboutPage() {
       <div className="shell">
         <section className="hero hero-centered">
           <div>
-            <span className="kicker">Sobre nosotros</span>
-            <h1 className="page-title">De dónde nace BorikíPR</h1>
+            <span className="kicker">Sobre Borikí</span>
+            <h1 className="page-title">Productos propios con identidad clara.</h1>
             <p className="subtitle">
-              BorikíPR nace de una idea simple: construir productos propios con
-              calidad real. Con raíces claras y una visión hacia adelante.
+              BorikíPR nace de una idea simple: construir herramientas digitales
+              con calidad real, presencia de marca y una base sólida para crecer.
             </p>
           </div>
         </section>
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <p>
                 “Borikí” es un guiño a nuestra identidad y a Puerto Rico. El
                 coquí representa presencia: pequeño, firme e imposible de
-                ignorar. El dorado, el estándar: hacerlo bien.
+                ignorar. El dorado representa el estándar: hacerlo bien.
               </p>
             </FeatureCard>
             <FeatureCard title="Quiénes somos">
@@ -46,24 +46,24 @@ export default function AboutPage() {
             <FeatureCard title="Qué hacemos">
               <p>
                 Creamos herramientas y soluciones digitales. Empezamos con
-                proyectos propios como el CRM Borikí, y expandiremos a productos
-                que resuelvan necesidades reales.
+                Borikí CRM y expandiremos el portal a productos que resuelvan
+                necesidades reales.
               </p>
             </FeatureCard>
             <FeatureCard title="Hacia dónde vamos">
               <p>
-                Construiremos un ecosistema: software, utilidades y productos
-                listos para usarse y escalar. La meta es clara: calidad, soporte
-                y evolución constante.
+                Construiremos un ecosistema de aplicaciones, documentación,
+                descargas y soporte. La meta es clara: calidad, utilidad y
+                evolución constante.
               </p>
             </FeatureCard>
           </div>
           <div className="cta-row">
-            <Link className="button button-primary" href="/contact">
-              Contactar
+            <Link className="button button-primary" href="/crm">
+              Ver Borikí CRM
             </Link>
-            <Link className="button" href="/">
-              Volver al Home
+            <Link className="button" href="/contact">
+              Contactar
             </Link>
           </div>
         </section>

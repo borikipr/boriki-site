@@ -4,6 +4,10 @@ export const site = {
   url: "https://apps.borikipr.com",
   email: "borikipr@gmail.com",
   logo: "/assets/logo-boriki.png",
+  social: {
+    instagram: "https://www.instagram.com/borikipr/",
+    facebook: "https://www.facebook.com/Borikipr",
+  },
 };
 
 export const navigation = [

@@ -34,6 +34,7 @@ export function DownloadCard({
         <span className="meta-pill">{status}</span>
         <span className="meta-pill">{platform}</span>
         <span className="meta-pill">{trial}</span>
+        <span className="meta-pill">Activación por Product Key</span>
       </div>
       <div className="cta-row">
         <a className="button button-primary" href={downloadUrl} download>

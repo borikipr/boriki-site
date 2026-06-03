@@ -32,7 +32,7 @@ export default function HomePage() {
             <Image
               className="hero-logo"
               src={site.logo}
-              alt="Borikí logo"
+              alt="Logo Borikí"
               width={520}
               height={520}
               priority

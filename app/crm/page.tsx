@@ -121,6 +121,41 @@ export default function CrmPage() {
         <section className="section">
           <div className="section-header">
             <div>
+              <p className="eyebrow">Instalación</p>
+              <h2 className="section-title">Instala, prueba y activa cuando estés listo.</h2>
+            </div>
+          </div>
+          <div className="grid">
+            <FeatureCard title="1. Descarga" badge="Instalador oficial">
+              <p>
+                Usa el botón de descarga del portal para obtener el instalador
+                actual de Borikí CRM.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="2. Instala" badge={crm.platform}>
+              <p>
+                Ejecuta el instalador en la computadora donde se usará el CRM y
+                completa el asistente de instalación.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="3. Prueba" badge="30 días">
+              <p>
+                Evalúa el CRM completo durante el periodo de prueba gratuita sin
+                limitar la experiencia principal.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="4. Activa" badge="Product Key">
+              <p>
+                Cuando estés listo, la activación se realiza mediante Product
+                Key para continuar usando el sistema.
+              </p>
+            </FeatureCard>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section-header">
+            <div>
               <p className="eyebrow">Información del producto</p>
               <h2 className="section-title">
                 Todo lo necesario para instalar, probar y operar.

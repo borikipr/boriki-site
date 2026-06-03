@@ -4,10 +4,10 @@ import { FeatureCard } from "@/components/feature-card";
 import { crm, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contacto",
+  title: "Soporte y contacto",
   description: "Contacto y soporte para Borikí Apps.",
   openGraph: {
-    title: "Contacto | Borikí Apps",
+    title: "Soporte y contacto | Borikí Apps",
     description: "Canal oficial de contacto y soporte para Borikí Apps.",
     url: "/contact",
   },
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <section className="product-hero">
           <div>
             <span className="kicker">Soporte y contacto</span>
-            <h1 className="page-title">Hablemos de Borikí Apps.</h1>
+            <h1 className="page-title">Estamos para ayudarte con Borikí Apps.</h1>
             <p className="subtitle">
               Para soporte, compra de Product Key, preguntas comerciales o
               colaboración, el canal oficial por ahora es email.
@@ -64,13 +64,13 @@ export default function ContactPage() {
                 el equipo donde se usará el CRM.
               </p>
             </FeatureCard>
-            <FeatureCard title="Respuesta" badge="Email">
+            <FeatureCard title="Tiempo de respuesta" badge="Email">
               <p>
                 Respondemos tan pronto sea posible. El portal seguirá creciendo
                 con documentación y soporte más estructurado.
               </p>
             </FeatureCard>
-            <FeatureCard title="Portal" badge="Borikí Apps">
+            <FeatureCard title="Portal Borikí Apps" badge="Software">
               <p>
                 Este espacio está dedicado a aplicaciones Borikí, descargas,
                 notas de versión y futuras herramientas.

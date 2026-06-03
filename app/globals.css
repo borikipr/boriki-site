@@ -542,6 +542,26 @@ h1 {
   color: var(--gold-strong);
 }
 
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.footer-social a {
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--gold-strong);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 820px) {
   .shell {
     width: min(100% - 28px, var(--max));
