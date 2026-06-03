@@ -9,18 +9,19 @@ export const site = {
 export const navigation = [
   { href: "/", label: "Home" },
   { href: "/crm", label: "CRM" },
-  { href: "/about", label: "About" },
+  { href: "/crm#changelog", label: "Changelog" },
+  { href: "/crm#faq", label: "Preguntas" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const crm = {
   name: "Borikí CRM",
-  version: "1.0.0",
+  version: "1.0.1",
   downloadUrl: "https://apps.borikipr.com/downloads/CRM_Setup.exe",
   platform: "Windows 10 / 11",
   trial: "Prueba completa por 30 días",
   license: "Licencia por equipo",
-  status: "Preparado para lanzamiento",
+  status: "Versión actual disponible",
 };
 
 export const productKeyMailto =

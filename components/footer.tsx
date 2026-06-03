@@ -1,16 +1,22 @@
-import { site } from "@/lib/site";
+import Link from "next/link";
+import { crm, site } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="shell footer-inner">
         <div>
-          © {new Date().getFullYear()} {site.company}
+          <strong>Borikí Apps</strong>
+          <p className="small">CRM Powered by Borikí • v{crm.version}</p>
+          <p className="small">© {new Date().getFullYear()} {site.company}</p>
         </div>
-        <div>
-          <span className="powered">Powered by Borikí</span>
-          <span className="small"> · Hecho con calma, pensado para durar.</span>
-        </div>
+        <nav className="footer-links" aria-label="Footer">
+          <Link href="/">Home</Link>
+          <Link href="/crm">CRM</Link>
+          <Link href="/crm#changelog">Changelog</Link>
+          <Link href="/crm#faq">Preguntas</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
       </div>
     </footer>
   );

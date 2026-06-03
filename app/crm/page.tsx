@@ -2,34 +2,60 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DownloadCard } from "@/components/download-card";
 import { FeatureCard } from "@/components/feature-card";
+import { ScreenshotCard } from "@/components/screenshot-card";
 import { VersionCard } from "@/components/version-card";
-import { crm, notifyMailto, productKeyMailto } from "@/lib/site";
+import { crm, productKeyMailto, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Borikí CRM",
   description:
-    "Borikí CRM: prueba completa por 30 días, activación con Product Key y licencia por equipo.",
+    "Borikí CRM: gestión de clientes, contactos, seguimiento, actividades, prueba gratuita de 30 días y activación con Product Key.",
   openGraph: {
     title: "Borikí CRM | Borikí Apps",
     description:
-      "CRM para clientes, seguimiento, etapas y actividades. Descarga preparada para futuras versiones.",
+      "CRM profesional de escritorio para organizar clientes, actividades y operación diaria.",
     url: "/crm",
   },
 };
+
+const screenshots = [
+  {
+    title: "Dashboard moderno",
+    description:
+      "Espacio preparado para mostrar la vista principal cuando haya capturas oficiales.",
+  },
+  {
+    title: "Gestión de clientes",
+    description:
+      "Área para capturas de fichas, contactos, estados y próximas acciones.",
+  },
+  {
+    title: "Seguimiento y actividades",
+    description:
+      "Preparado para enseñar historial, etapas y registros de actividad.",
+  },
+  {
+    title: "Configuración visual",
+    description:
+      "Lugar reservado para personalización, branding y ajustes disponibles.",
+  },
+];
 
 export default function CrmPage() {
   return (
     <main className="main">
       <div className="shell">
-        <section className="hero hero-centered">
+        <section className="product-hero">
           <div>
-            <span className="kicker">Producto • CRM</span>
-            <h1 className="page-title">CRM Borikí</h1>
+            <span className="kicker">Borikí Apps • Producto CRM</span>
+            <h1 className="page-title">
+              CRM para seguimiento con orden y presencia.
+            </h1>
             <p className="subtitle">
-              Un CRM diseñado para trabajar con orden: clientes, seguimiento,
-              etapas y actividades. Descárgalo gratis y úsalo completo por{" "}
-              <strong>30 días</strong>. Al finalizar la prueba, el sistema se{" "}
-              <strong>bloquea</strong> hasta activarlo con un{" "}
+              Borikí CRM es una aplicación local para Windows creada para
+              organizar clientes, contactos, seguimiento, actividades y etapas
+              sin complicar la operación diaria. Incluye prueba completa de{" "}
+              <strong>30 días</strong> y activación mediante{" "}
               <strong>Product Key</strong>.
             </p>
             <div className="cta-row">
@@ -39,11 +65,46 @@ export default function CrmPage() {
               <Link className="button" href={productKeyMailto}>
                 Comprar Product Key
               </Link>
-              <Link className="button" href="#faq">
-                Preguntas
+              <Link className="button" href="#screenshots">
+                Ver vistas
               </Link>
             </div>
           </div>
+
+          <aside className="release-panel" aria-label="Resumen de Borikí CRM">
+            <span className="meta-pill">
+              <span className="status-dot" aria-hidden="true" /> {crm.status}
+            </span>
+            <h2>{crm.name} v{crm.version}</h2>
+            <p>
+              Descarga oficial, requisitos, notas de versión y soporte en un
+              solo lugar.
+            </p>
+            <div className="release-list">
+              <span>{crm.platform}</span>
+              <span>{crm.trial}</span>
+              <span>{crm.license}</span>
+            </div>
+          </aside>
+        </section>
+
+        <section className="stats-grid" aria-label="Resumen del CRM">
+          <article className="stat-card">
+            <strong>v{crm.version}</strong>
+            <span>Versión actual</span>
+          </article>
+          <article className="stat-card">
+            <strong>30 días</strong>
+            <span>Prueba gratuita</span>
+          </article>
+          <article className="stat-card">
+            <strong>Windows</strong>
+            <span>10 / 11 requerido</span>
+          </article>
+          <article className="stat-card">
+            <strong>Local</strong>
+            <span>Activación por Product Key</span>
+          </article>
         </section>
 
         <section className="section">
@@ -58,172 +119,140 @@ export default function CrmPage() {
         </section>
 
         <section className="section">
-          <div className="grid">
-            <FeatureCard
-              title="Cómo funciona la licencia"
-              badge="Trial 30 días • Bloqueo automático"
-            >
-              <p>
-                <strong>Prueba completa por 30 días.</strong> Al terminar el
-                periodo de prueba, el programa queda <strong>bloqueado</strong>{" "}
-                y requiere un <strong>Product Key</strong> para continuar.
-              </p>
-            </FeatureCard>
-            <FeatureCard
-              title="Enfoque"
-              badge="Orden • Productividad • Escalable"
-            >
-              <p>
-                CRM Borikí está pensado para negocios que quieren control sin
-                complicarse: seguimiento claro, datos limpios y una experiencia
-                directa.
-              </p>
-            </FeatureCard>
-          </div>
-        </section>
-
-        <section className="section">
           <div className="section-header">
             <div>
-              <p className="eyebrow">Versión actual</p>
-              <h2 className="section-title">Lo que incluye v{crm.version}</h2>
+              <p className="eyebrow">Información del producto</p>
+              <h2 className="section-title">
+                Todo lo necesario para instalar, probar y operar.
+              </h2>
             </div>
           </div>
           <div className="grid">
-            <FeatureCard title="Clientes & contactos">
-              <ul>
-                <li>Ficha de cliente</li>
-                <li>Teléfonos y emails</li>
-                <li>Estados de contacto</li>
-                <li>Próxima acción</li>
-              </ul>
-            </FeatureCard>
-            <FeatureCard title="Seguimiento & etapas">
-              <ul>
-                <li>Historial de seguimiento</li>
-                <li>Etapas del proceso</li>
-                <li>Actividades y tipo de actividad</li>
-                <li>Auditoría e historial de cambios</li>
-              </ul>
-            </FeatureCard>
-            <FeatureCard title="Seguridad">
-              <ul>
-                <li>Usuarios y roles Admin / Usuario</li>
-                <li>Reset de contraseña</li>
-                <li>Cambio de contraseña</li>
-                <li>Activación por Product Key</li>
-              </ul>
-            </FeatureCard>
-            <FeatureCard title="Base sólida">
-              <ul>
-                <li>SQL con estructura estable</li>
-                <li>Validaciones de email, teléfono y dinero</li>
-                <li>Modo vista / editar con UPSERT</li>
-                <li>Arquitectura lista para crecer</li>
-              </ul>
-            </FeatureCard>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="section-header">
-            <div>
-              <p className="eyebrow">Activación</p>
-              <h2 className="section-title">Licencia y activación</h2>
-            </div>
-          </div>
-          <div className="grid">
-            <FeatureCard
-              title="Licencia por equipo"
-              badge="Licencia local • 1 equipo"
-            >
+            <FeatureCard title="Borikí CRM" badge="Producto actual">
               <p>
-                CRM Borikí utiliza un sistema de licencia machine-based. Cada
-                Product Key activa el sistema en <strong>una sola computadora</strong>.
-              </p>
-              <ul>
-                <li>1 licencia = 1 PC</li>
-                <li>Bloqueo automático al finalizar el trial</li>
-                <li>Reactivación inmediata con Product Key</li>
-                <li>Los datos del cliente se conservan</li>
-              </ul>
-            </FeatureCard>
-            <FeatureCard title="Activación" badge="Activación local">
-              <p>
-                La activación se realiza con Product Key. No requiere conexión
-                constante a internet.
+                Herramienta CRM para centralizar clientes, contactos,
+                seguimiento, actividades y etapas del proceso comercial.
               </p>
             </FeatureCard>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="section-header">
-            <div>
-              <p className="eyebrow">Distribución</p>
-              <h2 className="section-title">Requisitos e instalación</h2>
-            </div>
-          </div>
-          <div className="grid">
-            <FeatureCard title="Requisitos" badge="Windows 10 / 11">
+            <FeatureCard title="Versión actual" badge={`v${crm.version}`}>
               <p>
-                Compatible con Windows 10 y Windows 11. El instalador indicará
+                La versión actual se muestra desde la configuración central del
+                portal. No se cambian archivos de descarga ni version.json.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="Prueba gratuita" badge="30 días">
+              <p>
+                El usuario puede probar el CRM completo por 30 días. Al terminar
+                el periodo de prueba, se requiere Product Key para continuar.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="Descarga" badge="Instalador oficial">
+              <p>
+                El botón de descarga usa la URL existente del instalador y se
+                mantiene compatible con Cloudflare y Vercel.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="Funciones" badge="Clientes • Seguimiento">
+              <p>
+                Incluye fichas de cliente, teléfonos, emails, estados de
+                contacto, próximas acciones, actividades e historial.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="Requisitos" badge={crm.platform}>
+              <p>
+                Requiere Windows 10 o Windows 11. El instalador indicará
                 cualquier requisito adicional si aplica.
               </p>
             </FeatureCard>
-            <FeatureCard title="Instalación">
-              <ol>
-                <li>Descarga el instalador oficial desde este portal.</li>
-                <li>Ejecuta CRM_Setup.exe en la computadora donde se usará.</li>
-                <li>Completa el asistente de instalación.</li>
-                <li>Usa la prueba de 30 días o activa con Product Key.</li>
-              </ol>
-            </FeatureCard>
-            <FeatureCard title="Soporte" badge="Soporte: borikipr@gmail.com">
+            <FeatureCard title="Soporte y contacto" badge={site.email}>
               <p>
-                Soporte por email. Documentación y portal de soporte se añadirán
-                más adelante.
+                El soporte, compras de licencia y preguntas comerciales se
+                manejan por el email oficial.
               </p>
             </FeatureCard>
-            <FeatureCard title="Preparado para releases futuros">
+            <FeatureCard title="Branding de compañía" badge="Soporte visual">
               <p>
-                La página ya separa versión, descarga, notas, requisitos e
-                instrucciones para publicar nuevas versiones sin rehacer el sitio.
+                El producto contempla soporte de marca visual de compañía como
+                parte de su presentación y evolución.
               </p>
             </FeatureCard>
+          </div>
+        </section>
+
+        <section className="section" id="screenshots">
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Vistas del CRM</p>
+              <h2 className="section-title">
+                Una presentación visual lista para crecer.
+              </h2>
+            </div>
+            <p className="small">
+              Placeholders pulidos hasta que existan capturas oficiales del
+              producto. No se usan imágenes falsas.
+            </p>
+          </div>
+          <div className="screenshot-grid">
+            {screenshots.map((item) => (
+              <ScreenshotCard
+                key={item.title}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="changelog">
+          <div className="section-header">
+            <div>
+              <p className="eyebrow">Changelog</p>
+              <h2 className="section-title">Cambios organizados por versión.</h2>
+            </div>
+          </div>
+          <div className="grid">
+            <VersionCard
+              version={crm.version}
+              date="Actual"
+              status="Publicado"
+              notes={[
+                "Modernización visual.",
+                "Mejoras del dashboard.",
+                "Soporte de branding de compañía.",
+                "Mejoras en gestión de clientes y contactos.",
+                "Mejoras de estabilidad.",
+              ]}
+            />
+            <VersionCard
+              version="Futuras"
+              date="Roadmap"
+              status="Planificado"
+              notes={[
+                "Documentación pública de instalación.",
+                "Historial de cambios ampliado.",
+                "Canal de soporte más estructurado.",
+                "Más información de distribución por versión.",
+              ]}
+            />
           </div>
         </section>
 
         <section className="section" id="release-notes">
           <div className="section-header">
             <div>
-              <p className="eyebrow">Release notes</p>
-              <h2 className="section-title">Historial de versiones</h2>
+              <p className="eyebrow">Notas de versión</p>
+              <h2 className="section-title">Notas de la versión actual</h2>
             </div>
           </div>
           <div className="grid">
-            <VersionCard
-              version={crm.version}
-              date="Versión actual"
-              status="Actual"
-              notes={[
-                "Clientes, contactos, seguimiento y próximas acciones.",
-                "Usuarios y roles Admin / Usuario.",
-                "Validaciones de datos e historial de cambios.",
-                "Activación local por Product Key con trial de 30 días.",
-              ]}
-            />
-            <VersionCard
-              version="Siguiente"
-              date="Roadmap"
-              status="Planificado"
-              notes={[
-                "Documentación pública de instalación.",
-                "Checksums del instalador.",
-                "Historial de cambios descargable.",
-                "Canal formal de soporte.",
-              ]}
-            />
+            <FeatureCard title={`Borikí CRM v${crm.version}`} className="card-wide">
+              <p>
+                Esta versión está orientada a operación local en Windows,
+                gestión de clientes y contactos, seguimiento de actividades,
+                soporte visual de marca de compañía y mejoras generales de
+                estabilidad.
+              </p>
+            </FeatureCard>
           </div>
         </section>
 
@@ -231,42 +260,51 @@ export default function CrmPage() {
           <div className="section-header">
             <div>
               <p className="eyebrow">Preguntas frecuentes</p>
-              <h2 className="section-title">Antes de instalar</h2>
+              <h2 className="section-title">Respuestas rápidas antes de instalar.</h2>
             </div>
           </div>
           <div className="grid">
-            <FeatureCard title="¿Puedo descargarlo gratis?">
+            <FeatureCard title="¿Qué es Borikí CRM?">
               <p>
-                Sí. La descarga incluye una prueba completa por{" "}
-                <strong>30 días</strong>.
+                Es una aplicación CRM para organizar clientes, contactos,
+                seguimiento, actividades y procesos de negocio.
               </p>
             </FeatureCard>
-            <FeatureCard title="¿Qué pasa cuando termina la prueba?">
+            <FeatureCard title="¿Es local o en línea?">
               <p>
-                El programa se <strong>bloquea</strong> y requiere un Product
-                Key para continuar.
+                Es una aplicación local de escritorio. La activación se realiza
+                mediante Product Key.
               </p>
             </FeatureCard>
-            <FeatureCard title="¿Se puede usar en varias computadoras?">
+            <FeatureCard title="¿Requiere Windows?">
+              <p>Sí. Está preparado para Windows 10 y Windows 11.</p>
+            </FeatureCard>
+            <FeatureCard title="¿Tiene prueba gratuita?">
               <p>
-                No. La licencia es por computadora. Para usarlo en otro equipo se
-                requiere un Product Key adicional.
+                Sí. El CRM incluye prueba completa de 30 días antes de requerir
+                activación.
               </p>
             </FeatureCard>
-            <FeatureCard title="¿Pierdo mis datos si no compro de inmediato?">
+            <FeatureCard title="¿Cómo funcionan las actualizaciones?">
               <p>
-                No. Los datos permanecen guardados y se restauran al activar la
-                licencia.
+                Las futuras versiones se publicarán desde este portal con su
+                changelog, notas de versión y descarga correspondiente.
+              </p>
+            </FeatureCard>
+            <FeatureCard title="¿Soporta branding de compañía?">
+              <p>
+                Sí. El producto contempla soporte de branding visual de compañía
+                como parte de su presentación y evolución.
               </p>
             </FeatureCard>
           </div>
           <div className="cta-row">
-            <Link className="button" href="/">
-              Volver al Home
+            <Link className="button" href="/contact">
+              Contactar soporte
             </Link>
-            <Link className="button button-primary" href={notifyMailto}>
-              Notificarme del lanzamiento
-            </Link>
+            <a className="button button-primary" href={crm.downloadUrl} download>
+              Descargar v{crm.version}
+            </a>
           </div>
         </section>
       </div>

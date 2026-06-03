@@ -19,7 +19,7 @@ export function DownloadCard({
     <article className="card card-wide download-card">
       <div className="version-row">
         <div>
-          <span className="kicker">Producto actual</span>
+          <span className="kicker">Descarga oficial</span>
           <h3>{title}</h3>
         </div>
         <span className="meta-pill">
@@ -27,8 +27,8 @@ export function DownloadCard({
         </span>
       </div>
       <p>
-        Descarga oficial preparada para la versión actual. Esta sección queda lista
-        para publicar nuevos instaladores, notas y requisitos en futuras versiones.
+        Instalador actual para Windows. La descarga se mantiene en la ruta
+        oficial existente y queda lista para futuras versiones.
       </p>
       <div className="download-meta">
         <span className="meta-pill">{status}</span>
@@ -40,7 +40,7 @@ export function DownloadCard({
           Descargar v{version}
         </a>
         <a className="button" href="#release-notes">
-          Ver notas
+          Ver release notes
         </a>
       </div>
     </article>

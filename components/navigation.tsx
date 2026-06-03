@@ -10,8 +10,9 @@ export function Navigation() {
   return (
     <nav className="nav-links" aria-label="Principal">
       {navigation.map((item) => {
+        const basePath = item.href.split("#")[0];
         const active =
-          item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          item.href === "/" ? pathname === "/" : pathname === basePath;
 
         return (
           <Link
