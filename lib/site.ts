@@ -15,8 +15,8 @@ export const navigation = [
 
 export const crm = {
   name: "Borikí CRM",
-  version: "1.0.1",
-  downloadUrl: "/downloads/CRM_Setup.exe",
+  version: "1.0.0",
+  downloadUrl: "https://apps.borikipr.com/downloads/CRM_Setup.exe",
   platform: "Windows 10 / 11",
   trial: "Prueba completa por 30 días",
   license: "Licencia por equipo",

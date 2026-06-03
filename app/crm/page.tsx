@@ -33,9 +33,9 @@ export default function CrmPage() {
               <strong>Product Key</strong>.
             </p>
             <div className="cta-row">
-              <Link className="button button-primary" href={crm.downloadUrl}>
+              <a className="button button-primary" href={crm.downloadUrl} download>
                 Descargar v{crm.version}
-              </Link>
+              </a>
               <Link className="button" href={productKeyMailto}>
                 Comprar Product Key
               </Link>

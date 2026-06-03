@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type DownloadCardProps = {
   title: string;
   version: string;
@@ -38,12 +36,12 @@ export function DownloadCard({
         <span className="meta-pill">{trial}</span>
       </div>
       <div className="cta-row">
-        <Link className="button button-primary" href={downloadUrl}>
+        <a className="button button-primary" href={downloadUrl} download>
           Descargar v{version}
-        </Link>
-        <Link className="button" href="#release-notes">
+        </a>
+        <a className="button" href="#release-notes">
           Ver notas
-        </Link>
+        </a>
       </div>
     </article>
   );
