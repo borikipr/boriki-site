@@ -23,22 +23,22 @@ export function DownloadCard({
           <h3>{title}</h3>
         </div>
         <span className="meta-pill">
-          <span className="status-dot" aria-hidden="true" /> v{version}
+          <span className="status-dot" aria-hidden="true" /> Versión {version}
         </span>
       </div>
       <p>
-        Instalador actual para Windows. La descarga se mantiene en la ruta
-        oficial existente y queda lista para futuras versiones.
+        Instalador oficial para Windows. La descarga se mantiene en la ruta
+        oficial existente y queda lista para futuras actualizaciones.
       </p>
       <div className="download-meta">
         <span className="meta-pill">{status}</span>
         <span className="meta-pill">{platform}</span>
         <span className="meta-pill">{trial}</span>
-        <span className="meta-pill">Activación por Product Key</span>
+        <span className="meta-pill">Activación local</span>
       </div>
       <div className="cta-row">
         <a className="button button-primary" href={downloadUrl} download>
-          Descargar v{version}
+          Descargar Versión {version}
         </a>
         <a className="button" href="#release-notes">
           Ver notas de versión

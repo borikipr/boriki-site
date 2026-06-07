@@ -13,7 +13,7 @@ export const site = {
 export const navigation = [
   { href: "/", label: "Inicio" },
   { href: "/crm", label: "CRM" },
-  { href: "/crm#changelog", label: "Changelog" },
+  { href: "/crm#changelog", label: "Historial" },
   { href: "/crm#faq", label: "Preguntas" },
   { href: "/contact", label: "Contacto" },
 ];

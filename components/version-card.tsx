@@ -10,7 +10,7 @@ export function VersionCard({ version, date, status, notes }: VersionCardProps) 
     <article className="card version-card">
       <div className="version-row">
         <div>
-          <h3>v{version}</h3>
+          <h3>Versión {version}</h3>
           <p>{date}</p>
         </div>
         <span className="meta-pill">{status}</span>

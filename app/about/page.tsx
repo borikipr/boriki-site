@@ -63,7 +63,7 @@ export default function AboutPage() {
               Ver Borikí CRM
             </Link>
             <Link className="button" href="/contact">
-              Contactar
+              Contacto
             </Link>
           </div>
         </section>

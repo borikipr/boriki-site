@@ -19,61 +19,62 @@ export default function ContactPage() {
       <div className="shell">
         <section className="product-hero">
           <div>
-            <span className="kicker">Soporte y contacto</span>
+            <span className="kicker">Contacto</span>
             <h1 className="page-title">Estamos para ayudarte con Borikí Apps.</h1>
             <p className="subtitle">
-              Para soporte, compra de Product Key, preguntas comerciales o
-              colaboración, el canal oficial por ahora es email.
+              Para soporte técnico, compra de Product Key o preguntas
+              comerciales, nuestro canal oficial de atención es el correo
+              electrónico.
             </p>
             <div className="cta-row">
               <Link className="button button-primary" href={`mailto:${site.email}`}>
-                Enviar email
+                Enviar mensaje
               </Link>
               <Link className="button" href="/crm">
-                Ver CRM
+                Ver Borikí CRM
               </Link>
             </div>
           </div>
 
           <aside className="release-panel" aria-label="Contacto Borikí Apps">
-            <span className="meta-pill">Canal oficial</span>
+            <span className="meta-pill">Atención oficial</span>
             <h2>{site.email}</h2>
             <p>
-              Incluye tu nombre, empresa, teléfono y el motivo del mensaje para
-              poder responder con mejor contexto.
+              Por favor, incluye tu nombre y el motivo de tu consulta para
+              brindarte una respuesta más ágil.
             </p>
             <div className="release-list">
               <span>Soporte de {crm.name}</span>
-              <span>Compra de Product Key</span>
-              <span>Colaboraciones y negocios</span>
+              <span>Activación de licencias</span>
+              <span>Consultas comerciales</span>
             </div>
           </aside>
         </section>
 
         <section className="section">
           <div className="grid">
-            <FeatureCard title="Soporte" badge={site.email}>
+            <FeatureCard title="Soporte técnico" badge={site.email}>
               <p>
-                Para preguntas técnicas, instalación, activación o uso general
-                del CRM, escribe al correo oficial.
+                Ayuda con la instalación, errores del sistema o dudas sobre el
+                uso de nuestras aplicaciones.
               </p>
             </FeatureCard>
             <FeatureCard title="Licencias" badge="Product Key">
               <p>
-                Para adquirir una licencia, envía tu información de contacto y
-                el equipo donde se usará el CRM.
+                Gestión de nuevas claves de producto y soporte para la
+                activación de equipos.
               </p>
             </FeatureCard>
-            <FeatureCard title="Tiempo de respuesta" badge="Email">
+            <FeatureCard title="Tiempo de atención" badge="Email">
               <p>
-                Respondemos tan pronto sea posible. El portal seguirá creciendo
-                con documentación y soporte más estructurado.
+                Revisamos cada mensaje con prioridad para asegurar que tu
+                operación no se detenga.
               </p>
             </FeatureCard>
-            <FeatureCard title="Portal Borikí Apps" badge="Software">
+            <FeatureCard title="Marca Borikí" badge="Software">
               <p>
-                Este espacio está dedicado a aplicaciones Borikí, descargas,
-                notas de versión y futuras herramientas.
+                Un ecosistema de herramientas digitales enfocadas en calidad,
+                orden y presencia profesional.
               </p>
             </FeatureCard>
           </div>

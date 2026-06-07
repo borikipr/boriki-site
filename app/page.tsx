@@ -21,7 +21,7 @@ export default function HomePage() {
                 Ver Borikí CRM
               </Link>
               <Link className="button" href="/crm#changelog">
-                Changelog
+                Historial
               </Link>
               <Link className="button" href="/contact">
                 Contacto
@@ -42,7 +42,7 @@ export default function HomePage() {
 
         <section className="stats-grid" aria-label="Resumen del portal">
           <article className="stat-card">
-            <strong>v{crm.version}</strong>
+            <strong>Versión {crm.version}</strong>
             <span>CRM actual</span>
           </article>
           <article className="stat-card">
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="grid">
             <FeatureCard
               title="Borikí CRM"
-              badge={`Versión actual v${crm.version}`}
+              badge={`Versión ${crm.version}`}
             >
               <p>
                 CRM de escritorio para organizar clientes, contactos,

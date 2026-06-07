@@ -14,7 +14,7 @@ export default function NotFound() {
             </p>
             <div className="cta-row">
               <Link className="button button-primary" href="/">
-                Volver al Home
+                Volver al Inicio
               </Link>
               <Link className="button" href="/crm">
                 Ver CRM
