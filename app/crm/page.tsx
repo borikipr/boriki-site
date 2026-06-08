@@ -20,24 +20,39 @@ export const metadata: Metadata = {
 
 const screenshots = [
   {
-    title: "Dashboard moderno",
+    title: "Dashboard",
     description:
-      "Espacio preparado para mostrar la vista principal cuando haya capturas oficiales.",
+      "Consulta métricas y seguimientos importantes desde un solo lugar.",
+    src: "/assets/crm/dashboard.png",
+    alt: "Dashboard de Borikí CRM con métricas y seguimientos.",
   },
   {
-    title: "Gestión de clientes",
+    title: "Clientes",
     description:
-      "Área para capturas de fichas, contactos, estados y próximas acciones.",
+      "Administra compradores, vendedores, arrendadores y arrendatarios fácilmente.",
+    src: "/assets/crm/clientes.png",
+    alt: "Listado de clientes de Borikí CRM.",
   },
   {
-    title: "Seguimiento y actividades",
+    title: "Ficha del cliente",
     description:
-      "Preparado para enseñar historial, etapas y registros de actividad.",
+      "Accede a toda la información y el historial del cliente.",
+    src: "/assets/crm/ficha-cliente.png",
+    alt: "Ficha del cliente en Borikí CRM.",
   },
   {
-    title: "Configuración visual",
+    title: "Actividades",
     description:
-      "Lugar reservado para personalización, branding y ajustes disponibles.",
+      "Registra llamadas, correos, seguimientos y próximas acciones.",
+    src: "/assets/crm/actividades.png",
+    alt: "Pantalla de actividades de Borikí CRM.",
+  },
+  {
+    title: "Configuración",
+    description:
+      "Personaliza la apariencia y la información de tu organización.",
+    src: "/assets/crm/configuracion.png",
+    alt: "Centro de configuración de Borikí CRM.",
   },
 ];
 
@@ -183,6 +198,8 @@ export default function CrmPage() {
                 key={item.title}
                 title={item.title}
                 description={item.description}
+                src={item.src}
+                alt={item.alt}
               />
             ))}
           </div>
